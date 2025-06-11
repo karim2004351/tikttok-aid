@@ -1,0 +1,13 @@
+{
+  "targetVideo": {
+    "url": "https://vm.tiktok.com/ZNdB76hd2/",
+    "title": "فيديو محدث مع التخزين الدائم",
+    "lastUpdated": "2025-06-03T22:21:49.658Z"
+  },
+  "apiSettings": {
+    "tiktokClientKey": "persistent_key_123",
+    "tiktokClientSecret": "persistent_secret_456",
+    "hasApiKey": true,
+    "hasAccessToken": true
+  }
+}

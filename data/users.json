@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "email": "karimtik091980@gmail.com",
+    "username": "karimtik091980",
+    "displayName": "Karim",
+    "passwordHash": "$2b$10$Apxjd.Vqc8rzZRH9xX7k5u.V1AzgFQ4plyc11CQk/0g7p5cOY7nsW",
+    "isPremium": true,
+    "createdAt": "2025-06-05T18:34:38.661Z"
+  }
+]

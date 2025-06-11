@@ -1,0 +1,413 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cultural UI Adaptations */
+/* Arabic Language Styles */
+.lang-ar {
+  font-family: 'Cairo', 'Noto Sans Arabic', 'Arial Unicode MS', sans-serif;
+}
+
+.lang-ar .text-primary {
+  color: hsl(210 40% 50%);
+}
+
+.lang-ar .bg-primary {
+  background-color: hsl(210 40% 50%);
+}
+
+/* Enhanced Arabic typography */
+.lang-ar h1, .lang-ar h2, .lang-ar h3, .lang-ar h4, .lang-ar h5, .lang-ar h6 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.lang-ar .font-medium {
+  font-weight: 600;
+}
+
+/* Arabic-specific spacing adjustments */
+.lang-ar .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+  margin-right: calc(var(--tw-space-x) * var(--tw-space-x-reverse));
+  margin-left: calc(var(--tw-space-x) * calc(1 - var(--tw-space-x-reverse)));
+}
+
+/* English Language Styles */
+.lang-en {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.lang-en .text-primary {
+  color: hsl(221.2 83.2% 53.3%);
+}
+
+.lang-en .bg-primary {
+  background-color: hsl(221.2 83.2% 53.3%);
+}
+
+/* Enhanced English typography */
+.lang-en h1, .lang-en h2, .lang-en h3, .lang-en h4, .lang-en h5, .lang-en h6 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* RTL/LTR Layout Adaptations */
+[dir="rtl"] .flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .text-left {
+  text-align: left;
+}
+
+[dir="ltr"] .text-right {
+  text-align: right;
+}
+
+[dir="ltr"] .text-left {
+  text-align: left;
+}
+
+/* Smooth transitions for language switching */
+* {
+  transition: font-family 0.3s ease, letter-spacing 0.3s ease;
+}
+
+/* Cultural color adaptations */
+.lang-ar .gradient-primary {
+  background: linear-gradient(135deg, hsl(210 40% 50%) 0%, hsl(210 40% 40%) 100%);
+}
+
+.lang-en .gradient-primary {
+  background: linear-gradient(135deg, hsl(221.2 83.2% 53.3%) 0%, hsl(221.2 83.2% 43.3%) 100%);
+}
+
+/* Button adaptations */
+.lang-ar .btn-primary {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+}
+
+.lang-en .btn-primary {
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Cultural spacing for Arabic */
+.lang-ar .card-spacing {
+  padding: 1.5rem;
+  gap: 1.25rem;
+}
+
+.lang-en .card-spacing {
+  padding: 1.25rem;
+  gap: 1rem;
+}
+
+:root {
+  --background: 220 14% 96%; /* Light professional gray */
+  --foreground: 224 71% 4%; /* Very dark blue */
+  --muted: 220 14% 96%; /* Light muted */
+  --muted-foreground: 220 9% 46%; /* Medium gray */
+  --popover: 0 0% 100%; /* Pure white */
+  --popover-foreground: 224 71% 4%; /* Very dark blue */
+  --card: 0 0% 100%; /* Pure white cards */
+  --card-foreground: 224 71% 4%; /* Very dark blue */
+  --border: 220 13% 91%; /* Light border */
+  --input: 0 0% 100%; /* White inputs */
+  --primary: 262 83% 58%; /* Professional purple */
+  --primary-foreground: 210 20% 98%; /* Light on primary */
+  --secondary: 220 14% 96%; /* Light secondary */
+  --secondary-foreground: 220 9% 46%; /* Medium on secondary */
+  --accent: 262 83% 58%; /* Purple accent */
+  --accent-foreground: 210 20% 98%; /* Light on accent */
+  --destructive: 0 84% 60%; /* Red destructive */
+  --destructive-foreground: 0 0% 100%; /* White on destructive */
+  --ring: 262 83% 58%; /* Purple ring */
+  --radius: 0.75rem;
+
+  /* Custom slate colors for dark theme */
+  --slate-50: 210 40% 98%; /* #f8fafc */
+  --slate-100: 210 40% 96%; /* #f1f5f9 */
+  --slate-200: 214 32% 91%; /* #e2e8f0 */
+  --slate-300: 213 27% 84%; /* #cbd5e1 */
+  --slate-400: 215 20% 65%; /* #94a3b8 */
+  --slate-500: 215 16% 47%; /* #64748b */
+  --slate-600: 215 19% 35%; /* #475569 */
+  --slate-700: 215 25% 27%; /* #334155 */
+  --slate-800: 217 33% 17%; /* #1e293b */
+  --slate-850: 218 28% 13%; /* #0f1729 */
+  --slate-900: 222 84% 5%; /* #0f172a */
+}
+
+.dark {
+  --background: 240 10% 3.9%; /* #0a0e1a */
+  --foreground: 0 0% 98%; /* #fafafa */
+  --muted: 240 3.7% 15.9%; /* #27272a */
+  --muted-foreground: 240 5% 64.9%; /* #a1a1aa */
+  --popover: 240 10% 3.9%; /* #0a0e1a */
+  --popover-foreground: 0 0% 98%; /* #fafafa */
+  --card: 240 10% 3.9%; /* #0a0e1a */
+  --card-foreground: 0 0% 98%; /* #fafafa */
+  --border: 240 3.7% 15.9%; /* #27272a */
+  --input: 240 3.7% 15.9%; /* #27272a */
+  --primary: 207 90% 54%; /* #1d9bf0 */
+  --primary-foreground: 211 100% 99%; /* #f8fafc */
+  --secondary: 240 3.7% 15.9%; /* #27272a */
+  --secondary-foreground: 0 0% 98%; /* #fafafa */
+  --accent: 240 3.7% 15.9%; /* #27272a */
+  --accent-foreground: 0 0% 98%; /* #fafafa */
+  --destructive: 0 62.8% 30.6%; /* #7f1d1d */
+  --destructive-foreground: 0 0% 98%; /* #fafafa */
+  --ring: 240 4.9% 83.9%; /* #d4d4d8 */
+}
+
+/* Custom slate color classes */
+.bg-slate-850 {
+  background-color: hsl(var(--slate-850));
+}
+
+.border-slate-850 {
+  border-color: hsl(var(--slate-850));
+}
+
+.text-slate-850 {
+  color: hsl(var(--slate-850));
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #f8fafc !important;
+    color: #334155 !important;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--slate-800));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--slate-600));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--slate-500));
+  }
+}
+
+/* Custom animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Terminal-like font for logs */
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+/* تطبيق الإصلاحات فقط على صفحة الإدارة */
+
+body {
+  background: #ffffff !important;
+  color: #1e293b !important;
+}
+
+/* تحسين ألوان صفحة الإدارة فقط */
+.admin-container {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%) !important;
+  min-height: 100vh !important;
+  color: #f1f5f9 !important;
+}
+
+.admin-container .bg-white {
+  background-color: rgba(51, 65, 85, 0.95) !important;
+  color: #f1f5f9 !important;
+  border: 1px solid rgba(71, 85, 105, 0.5) !important;
+}
+
+.admin-container .bg-slate-50 {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+  color: #e2e8f0 !important;
+}
+
+.admin-container .bg-slate-100 {
+  background-color: rgba(51, 65, 85, 0.7) !important;
+  color: #e2e8f0 !important;
+}
+
+/* إصلاح النصوص لتتناسب مع الخلفية الداكنة */
+.admin-container .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+.admin-container .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+.admin-container .text-gray-600 {
+  color: #cbd5e1 !important;
+}
+
+.admin-container .text-gray-700 {
+  color: #e2e8f0 !important;
+}
+
+.admin-container .text-gray-800 {
+  color: #f1f5f9 !important;
+}
+
+.admin-container .text-gray-900 {
+  color: #f8fafc !important;
+}
+
+/* إصلاح الحقول - فقط لصفحة الإدارة */
+.admin-container input,
+.admin-container textarea,
+.admin-container select {
+  background-color: rgba(71, 85, 105, 0.8) !important;
+  color: #f1f5f9 !important;
+  border-color: rgba(100, 116, 139, 0.6) !important;
+}
+
+.admin-container input:focus,
+.admin-container textarea:focus,
+.admin-container select:focus {
+  border-color: #8b5cf6 !important;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.3) !important;
+  background-color: rgba(71, 85, 105, 0.9) !important;
+}
+
+/* إصلاح البطاقات - فقط لصفحة الإدارة */
+.admin-container [data-radix-card],
+.admin-container .card {
+  background-color: rgba(51, 65, 85, 0.95) !important;
+  border-color: rgba(71, 85, 105, 0.5) !important;
+  color: #f1f5f9 !important;
+}
+
+/* إضافة ظلال لطيفة للبطاقات */
+.card,
+[data-radix-card] {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid rgba(229, 231, 235, 0.8) !important;
+}
+
+/* أزرار ملونة مخصصة لصفحة الإدارة */
+.admin-container .btn-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2) !important;
+}
+
+.admin-container .btn-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.2) !important;
+}
+
+.admin-container .btn-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2) !important;
+}
+
+.admin-container .btn-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2) !important;
+}
+
+.admin-container .btn-info {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* شرائط حالة ملونة */
+.admin-container .status-success {
+  background: linear-gradient(90deg, #d1fae5 0%, #a7f3d0 100%) !important;
+  color: #065f46 !important;
+  border-left: 4px solid #10b981 !important;
+}
+
+.admin-container .status-warning {
+  background: linear-gradient(90deg, #fef3c7 0%, #fde68a 100%) !important;
+  color: #92400e !important;
+  border-left: 4px solid #f59e0b !important;
+}
+
+.admin-container .status-error {
+  background: linear-gradient(90deg, #fee2e2 0%, #fecaca 100%) !important;
+  color: #991b1b !important;
+  border-left: 4px solid #ef4444 !important;
+}
+
+.admin-container .status-info {
+  background: linear-gradient(90deg, #dbeafe 0%, #bfdbfe 100%) !important;
+  color: #1e40af !important;
+  border-left: 4px solid #3b82f6 !important;
+}
+
+/* تحسين الإحصائيات */
+.admin-container .stat-card {
+  background: linear-gradient(135deg, rgba(51, 65, 85, 0.9) 0%, rgba(71, 85, 105, 0.8) 100%) !important;
+  border: 1px solid rgba(100, 116, 139, 0.4) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+  color: #f1f5f9 !important;
+}
+
+.admin-container .stat-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4) !important;
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.95) 0%, rgba(100, 116, 139, 0.9) 100%) !important;
+}
+
+/* تأثيرات التدرج للعناصر الرئيسية */
+.admin-container .header-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+
+.admin-container .sidebar-gradient {
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+
+/* تحسين الـ tabs */
+.admin-container [data-state="active"] {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+  color: white !important;
+}
+
+/* إزالة أي تداخل مع الأزرار */
