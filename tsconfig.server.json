@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "dist/server",
     "rootDir": "server",
-    "module": "CommonJS",
+    "module": "ESNext",   ← ✅ تم تعديله
     "target": "ES2020",
     "strict": true,
     "esModuleInterop": true,
